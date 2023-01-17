@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const person = require("../models/User");
+const User = require("../models/User");
 //RETURN ALL USERS
 router.get("/getUsers", (req, res) => {
   User.find()
