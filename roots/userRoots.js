@@ -16,13 +16,13 @@ router.post("/addUser", (req, res) => {
     .catch((err) => res.status(500).json(err));
 });
 //EDIT A USER BY ID
-router.put("/user/updateUser/:userId", (req, res) => {
+router.put("/updateUser/:userId", (req, res) => {
   User.findByIdAndUpdate(req.params.userId, req.body)
     .then((data) => res.json(data))
     .catch((err) => res.status(500).json(err));
 });
 //REMOVE A USER BY ID
-router.delete("/user/deleteUser/:userId", (req, res) => {
+router.delete("/deleteUser/:userId", (req, res) => {
   User.findByIdAndRemove(req.params.userId)
     .then((data) => res.json(data))
     .catch((err) => res.status(500).json(err));
